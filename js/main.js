@@ -10,7 +10,6 @@ const $submit = window.document.getElementById('$submitButton')
 let list = []
 
 // Resolve attrs
-
 const resolveAttrs = (object = {}) => {
   const keys = Object.keys(object)
   const attrs = []
@@ -27,6 +26,8 @@ const resolveAttrs = (object = {}) => {
 
 // Create tags
 const markup = tag => attrs => content => `<${tag} ${resolveAttrs(attrs)}>${content}</${tag}>`
+markup('tr')({class: "table-row"})('Hello there :D')
+
 
 // Validate Inputs
 const verifyInputValue = (input) => {
